@@ -7,7 +7,7 @@ window.addEventListener("keydown", playSound);
 function playSound(e){
   const audioEle = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const keyEle = document.querySelector(`li[data-key="${e.keyCode}"]`);
-  if (audioEle === null) { // For keys without sound effect
+  if (audioEle === null) { // For keys with no sound effect
     return;
   } 
   audioEle.currentTime = 0; // Rewinds audio 
@@ -17,4 +17,10 @@ function playSound(e){
 
 // Function to remove click effect class from the keys
 const drumKeys = document.querySelectorAll("[class='drum-keys__items']");
+drumKeys.forEach((key) => key.addEventListener("transitionend", removeClass));
+drumKeys.forEach((key) => key.addEventListener("webkitTransitionEnd", removeClass));
+
+function removeClass(e) {
+  this.classList.remove("play");
+}
 
