@@ -62,7 +62,6 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 0.15);
   transition: all 0.1s ease;
-  cursor: pointer;
 }
 
 .play {
@@ -79,7 +78,7 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
    h1 {
      font-size: 3em;
    }
-   
+
    .drum-keys__items {
      background: rgba(255, 255, 255, 0.2);
    }
