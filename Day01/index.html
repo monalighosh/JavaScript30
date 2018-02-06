@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page needs -->
+  <meta charset="utf-8">
+  <title>Day01: JavaScript Drum Kit</title>
+  <meta name="description" content="Vanilla JavaScript Drum Kit">
+  <meta name="keywords" content="Vanilla JavaScript Drum Kit">
+
+  <!-- Responsive specific meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Vanilla JavaScript Drum Kit</h1>
+    <ul class="drum-keys">
+      <li class="drum-keys__items" data-key="65">A</li>
+      <li class="drum-keys__items" data-key="68">D</li>
+      <li class="drum-keys__items" data-key="71">G</li>
+      <li class="drum-keys__items" data-key="74">J</li>
+      <li class="drum-keys__items" data-key="77">M</li>
+      <li class="drum-keys__items" data-key="80">P</li>
+      <li class="drum-keys__items" data-key="83">S</li>
+      <li class="drum-keys__items" data-key="86">V</li>
+      <li class="drum-keys__items" data-key="89">Y</li>
+    </ul>
+  </div>
+
+  <!-- Audio -->
+  <audio data-key="65" src="sounds/boom.wav"></audio>
+  <audio data-key="68" src="sounds/clap.wav"></audio>
+  <audio data-key="71" src="sounds/hihat.wav"></audio>
+  <audio data-key="74" src="sounds/kick.wav"></audio>
+  <audio data-key="77" src="sounds/openhat.wav"></audio>
+  <audio data-key="80" src="sounds/ride.wav"></audio>
+  <audio data-key="83" src="sounds/snare.wav"></audio>
+  <audio data-key="86" src="sounds/tink.wav"></audio>
+  <audio data-key="89" src="sounds/tom.wav"></audio>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
