@@ -23,4 +23,3 @@ drumKeys.forEach((key) => key.addEventListener("webkitTransitionEnd", removeClas
 function removeClass(e) {
   this.classList.remove("play");
 }
-
