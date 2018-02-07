@@ -3,6 +3,7 @@ const hourHand = document.querySelector(".hour");
 const minutesHand = document.querySelector(".minute");
 const secondsHand = document.querySelector(".seconds");
 
+
 // Clock function
 function clockTicking() {
   const now = new Date();
