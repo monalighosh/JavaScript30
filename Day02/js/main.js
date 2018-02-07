@@ -1,6 +1,6 @@
 "use strict";
 const hourHand = document.querySelector(".hour");
-const minuteHand = document.querySelector(".minute");
+const minutesHand = document.querySelector(".minute");
 const secondsHand = document.querySelector(".seconds");
 
 function clockHandsMovement() {
@@ -9,9 +9,10 @@ function clockHandsMovement() {
   const minutes = today.getMinutes();
   const hours = today.getHours();
   const secondDeg = ((seconds / 60) * 360) + 90;
-  // const minuteDeg = ((minutes / 60) * 360) + 90;
-  // const hoursDeg = ((hours / 24) * 360) + 90;
-  secondsHand.style.transform = `rotate(${secondDeg}deg)`;
-  console.log(minutes, hours);
+  const minuteDeg = ((minutes / 60) * 360) + 90;
+  const hourDeg = ((hours / 12) * 360) + 90;
+  secondsHand.style.transform = `translateX(9%) rotate(${secondDeg}deg)`;
+  minutesHand.style.transform = `translateX(23%) rotate(${minuteDeg}deg)`;
+  hourHand.style.transform = `translateX(40%) rotate(${hourDeg}deg)`;
 }
-setInterval(clockHandsMovement, 1000)
+setInterval(clockHandsMovement, 1000);
