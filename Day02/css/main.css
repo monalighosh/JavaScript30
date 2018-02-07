@@ -15,9 +15,9 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
  ------------------------------------------------------------ */
  body {
   font: 400 100% 'Noto Serif', serif;
-  background-image: -webkit-linear-gradient(315deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
-  background-image: -o-linear-gradient(315deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
-  background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+  background-image: -webkit-linear-gradient(315deg, #6654F1 0%, #6654F1 60%, #EACCF8 60%, #EACCF8 100%, #69EACB 100%);
+  background-image: -o-linear-gradient(315deg, #6654F1 0%, #6654F1 60%, #EACCF8 60%, #EACCF8 100%, #69EACB 100%);
+  background-image: linear-gradient(-225deg, #6654F1 0%, #6654F1 60%, #EACCF8 60%, #EACCF8 100%, #69EACB 100%);
   letter-spacing: 0.05em;
  } 
 
@@ -41,6 +41,7 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
   font-size: 3.7rem;
   margin-right: 1em;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  color: #EACCF8;
  }
 
  /* ------------------------------------------------------------
@@ -58,9 +59,12 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
  }
 
  .clock__inner {
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: -webkit-linear-gradient(315deg, black 20%, transparent 70%);
   background-image: -o-linear-gradient(315deg, black 20%, transparent 70%);
-  background-image: linear-gradient(-225deg, black 20%, transparent 70%);
+  background-image: -webkit-linear-gradient(315deg, black 50%, transparent 80%);
+  background-image: -o-linear-gradient(315deg, black 50%, transparent 80%);
+  background-image: linear-gradient(-225deg, black 50%, transparent 80%);
   padding: 0.1em;
   width: 100%;
   height: 100%;
@@ -91,7 +95,7 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
  .clock__hand {
   position: absolute;
   height: 6px;
-  border-radius: 2px;
+  border-radius: 5px;
   top: 50%;
   -webkit-transition: all 0.05s cubic-bezier(0.46, 2.7, 0.68, 1.6);
   -o-transition: all 0.05s cubic-bezier(0.46, 2.7, 0.68, 1.6);
@@ -102,17 +106,18 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
  }
 
  .seconds {
+  background: #6654F1;
   width: 45%;
   -webkit-transform: translateX(9%) rotate(90deg);
       -ms-transform: translateX(9%) rotate(90deg);
           transform: translateX(9%) rotate(90deg);
   z-index: 5;
-  background: black;
  }
 
  .minute {
   background: white;
   width: 40%;
+  height: 7px;
   -webkit-transform: translateX(23%) rotate(90deg);
       -ms-transform: translateX(23%) rotate(90deg);
           transform: translateX(23%) rotate(90deg);
@@ -121,6 +126,7 @@ size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:ba
  .hour {
   background: white;
   width: 35%;
+  height: 8px;
   -webkit-transform: translateX(40%) rotate(90deg);
       -ms-transform: translateX(40%) rotate(90deg);
           transform: translateX(40%) rotate(90deg);
