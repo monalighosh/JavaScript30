@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page needs -->
+  <meta charset="utf-8">
+  <title>Update CSS Variables with JS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Responsive specific meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main-container">
+      <h1>Update CSS Variables with <span class="headHighlight">JS</span></h1>
+      <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input type="range" name="spacing" value="10" min="0" max="100" data-sizing="px">
+        <label for="blur">Blur:</label>
+        <input type="range" name="blur" value="0" min="0" max="100" data-sizing="px">
+        <label for="color">Base Color:</label>
+        <input type="color" name="color">
+      </div>
+      <div class="picture">
+        <img src="images/pink-flowers.jpg" alt="Pink Flowers">
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

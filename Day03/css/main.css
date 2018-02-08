@@ -1,0 +1,125 @@
+/* -------------------- CSS Variables with JS -------------------- */
+
+/* ------------------------------------------------------------
+  Normalize css minified
+------------------------------------------------------------ */ 
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before
+{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0}article,aside,footer,header,main,nav,section{display:block}a{background-
+color:transparent;-webkit-text-decoration-skip:objects;text-decoration:none}abbr[title]{border-bottom:none;text-
+decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-
+family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-
+size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
+
+/* ------------------------------------------------------------
+  CSS variables
+ ------------------------------------------------------------ */
+ :root {
+  --color: #f65aa8;
+  --spacing: 10px;
+  --blur: 0;
+ }
+
+/* ------------------------------------------------------------
+  Global styles
+ ------------------------------------------------------------ */
+body {
+  font: 400 100% 'Roboto Condensed', sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(50%, #f65aa8), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f65aa8 50%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #f65aa8 50%, #ffffff 100%);
+  background-image: linear-gradient(-180deg, #ffffff 0%, #f65aa8 50%, #ffffff 100%);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-shadow: 5px 0 5px rgba(255, 255, 255, 0.5);
+  margin-top: 0.5em;
+}
+
+/* ------------------------------------------------------------
+  Content styles
+ ------------------------------------------------------------ */
+.headHighlight {
+  color: var(--color);
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2em;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.controls {
+  padding: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+label {
+  font-size: 1.8rem;
+  padding: 0 0.5em 0 2rem;
+}
+
+img {
+  max-width: 100%;
+  width: 80%;
+  padding: var(--spacing);
+  -webkit-filter: blur(var(--blur));
+          filter: blur(var(--blur));
+  background: var(--color);
+}
+
+/* ------------------------------------------------------------
+  Media queries
+ ------------------------------------------------------------ */
+ @media screen and (max-width: 950px) and (min-width: 650px) {
+  .controls {
+    padding: 3em 2em;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  img {
+    width: 95%;
+  }
+ } 
+
+ @media screen and (max-width: 649px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .controls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+
+  label {
+    padding: 0.5em 0;
+  }
+
+  img {
+    width: 100%;
+  }
+ }
