@@ -1,0 +1,199 @@
+/* -------------------- Flex Panels Image Gallery -------------------- */
+
+/* ------------------------------------------------------------
+  Normalize css minified
+------------------------------------------------------------ */ 
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before
+{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0}article,aside,footer,header,main,nav,section{display:block}a{background-
+color:transparent;-webkit-text-decoration-skip:objects;text-decoration:none}abbr[title]{border-bottom:none;text-
+decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-
+family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-
+size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
+
+/* ------------------------------------------------------------
+  Global styles
+ ------------------------------------------------------------ */
+body {
+  font: 400 100% 'Sofia', cursive;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-shadow: 5px 0 5px rgba(255, 255, 255, 0.5);
+  margin: 1em;
+}
+
+/* ------------------------------------------------------------
+  Gallery styles
+ ------------------------------------------------------------ */
+.gallery {
+  display: flex;
+  overflow: hidden;
+  height: 1000px;
+}
+
+.gallery__panel {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 2rem;
+  justify-content: center;
+  transition: flex 0.5s ease-in-out;
+}
+
+.gallery__panel > p {
+  color: white;
+  text-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: transform 0.3s ease-in-out, font-size 0.5s cubic-bezier(0.06, 1.74, 0.25, 1);
+}
+
+.gallery__panel > p:nth-child(2) {
+  font-size: 4rem;
+}
+
+.gallery__panel > p:first-child {
+  transform: translateY(-100%);
+}
+
+.gallery__panel > p:last-child {
+  transform: translateY(100%);
+}
+
+.gallery--panel1 {
+  background: url(../images/img-1.jpg);
+} 
+
+.gallery--panel2 {
+  background: url(../images/img-2.jpg);
+} 
+
+.gallery--panel3 {
+  background: url(../images/img-3.jpg);
+}
+
+.gallery--panel4 {
+  background: url(../images/img-4.jpg);
+}
+
+.gallery--panel5 {
+  background: url(../images/img-5.jpg);
+}
+
+.open {
+  flex: 5;
+}
+
+.open > p:nth-child(2) {
+  font-size: 6rem;
+}
+
+.active > p:first-child,
+.active > p:last-child {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+  Media queries
+ ------------------------------------------------------------ */
+@media screen and (max-width: 1250px) {
+  .gallery__panel > p:nth-child(2) {
+    font-size: 3rem;
+  }
+
+  .open > p:nth-child(2) {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .gallery__panel > p {
+    font-size: 2rem;
+  }
+
+  .gallery__panel > p:nth-child(2) {
+    font-size: 2.5rem;
+  }
+
+  .open > p:nth-child(2) {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .gallery__panel {
+    background-size: auto;
+  }
+
+  .gallery__panel > p {
+    font-size: 1.8rem;
+  }
+
+  .gallery__panel > p:nth-child(2) {
+    font-size: 2.2rem;
+  }
+
+  .open > p:nth-child(2) {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery__panel {
+    flex-direction: row;
+    background-size: cover;
+  }
+
+  .gallery__panel > p {
+    flex: 1;
+  }
+
+  .gallery__panel > p:first-child {
+    transform: translateX(-100%);
+  }
+
+  .gallery__panel > p:last-child {
+    transform: translateX(100%);
+  }
+
+  .active > p:first-child,
+  .active > p:last-child {
+    transform: translateX(0);
+  }
+}

@@ -8,3 +8,5 @@
 **Day 03: Update CSS Variables with JS** | Things I learned: CSS variables and their usage, use of custom data attributes in JS, input change and mousemove event listeners, CSS style declaration properties such as setProperty, removeProperty, getPropertyValue etc. | [Live Demo](https://codepen.io/monalighosh/full/gvgaRz/)
 
 **Day 04: Array Cardio Day 1** | Things I learned: Array methods such as filter, map, sort, reduce, ES6 destructuring arrays, console.table command, use of an object to accumulate the data in a proper way.
+
+**Day 05: Flex Panels Image Gallery** | Things I learned: . | [Live Demo](https://codepen.io/monalighosh/full/gvgaRz/)
