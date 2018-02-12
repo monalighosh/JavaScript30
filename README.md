@@ -10,3 +10,7 @@
 **Day 04: Array Cardio Day 1** | Things I learned: Array methods such as filter, map, sort, reduce, ES6 destructuring arrays, console.table command, use of an object to accumulate the data in a proper way.
 
 **Day 05: Flex Panels Image Gallery** | Things I learned: Flexbox advanced features, how to apply transitionend event listener when there are two or more transition properties, CSS classList toggle method to toggle classes. | [Live Demo](https://codepen.io/monalighosh/full/QQpzoy/)
+
+**Day 06: City Search with Ajax** | Things I learned: 
+
+**Day 07: Array Cardio Day 2** | Things I learned: Array methods such as every, some, find and findIndex.
