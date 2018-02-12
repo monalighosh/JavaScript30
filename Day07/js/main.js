@@ -15,25 +15,36 @@ const comments = [
   { text: 'Nice Nice Nice!', id: 542328 }
 ];
 
+const currentYear = new Date().getFullYear();
+
 // Is at least one person 19 or older?
-const resultSome = people.some(function(person){
-  const now = new Date().getFullYear();
-  const age = now - person.year;
+// Uses an array method some to find if at least one item satisfies the criteria
+const resultSome = people.some((person) => {
+  const age = currentYear - person.year;
   return age >= 19;
 });
-console.log("Is at least one person 19 or older?");
-console.log(resultSome);
-console.log("----------------------");
-
+console.log(`Is at least one person 19 or older? ${resultSome}
+---------------------------`);
 
 // Is everyone 19 or older?
-const resultEvery = people.every(function(person){
-  const now = new Date().getFullYear();
-  const age = now - person.year;
+// Uses an array method every to find if every item satisfies the criteria
+const resultEvery = people.every((person) => {
+  const age = currentYear - person.year;
   return age >= 19;
 });
-console.log("Is everyone 19 or older?");
-console.log(resultEvery);
-console.log("----------------------");
+console.log(`Is everyone 19 or older? ${resultEvery}
+---------------------------`);
 
 // Find the comment with the ID of 823423
+// Uses an array method find to find an item that satisfies the test
+const resultFind = comments.find((comment) => comment.id === 823423);
+console.log("Find the comment with the ID of 823423"); 
+console.table(resultFind);
+console.log("---------------------------");
+
+// Find and delete the comment with the ID of 823423
+// Uses an array method findIndex to find an index of the item that satisfies the test and then uses array splice method to delete that item from an array
+const resultIndex = comments.findIndex((comment) => comment.id === 823423);
+comments.splice(resultIndex, 1);
+console.log("Find and delete the comment with the ID of 823423");
+console.table(comments);
