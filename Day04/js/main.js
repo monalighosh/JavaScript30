@@ -44,7 +44,7 @@ console.log("------------------------------------");
 Use of an array reduce method which takes the accumulator with initial value of 0. 
 It keeps on adding up the difference between investor's year property and passed property, and returns the total number of years lived 
 */
-const livedYears = inventors.reduce(function(acc, inventor){
+const livedYears = inventors.reduce((acc, inventor) => {
   acc += inventor.passed - inventor.year;
   return acc;
 }, 0);

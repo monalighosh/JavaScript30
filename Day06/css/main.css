@@ -1,0 +1,100 @@
+/* -------------------- City Search with Ajax -------------------- */
+
+/* ------------------------------------------------------------
+  Normalize css minified
+------------------------------------------------------------ */ 
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before
+{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0}article,aside,footer,header,main,nav,section{display:block}a{background-
+color:transparent;-webkit-text-decoration-skip:objects;text-decoration:none}abbr[title]{border-bottom:none;text-
+decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-
+family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-
+size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
+
+/* ------------------------------------------------------------
+  Global styles
+ ------------------------------------------------------------ */
+body {
+  font: 400 100% 'Roboto Condensed', sans-serif;
+  /*background-image: repeating-linear-gradient(125deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 1%, rgba(0, 0, 0, 0.08) 2%, rgba(0, 0, 0, 0.08) 4%);*/
+  background: #0ea1ee;
+  color: white;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-container {
+  left: 50%;
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+
+h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0.8em;
+  font-weight: 400;
+  
+}
+
+p {
+  font-size: 2.3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ------------------------------------------------------------
+  Search styles
+ ------------------------------------------------------------ */
+.city-search-container__input {
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid white;
+  color: inherit;
+  padding: 1em 0 0.5rem;
+  outline: none;
+  font-size: 3rem;
+  font-family: inherit;
+}
+
+.city-search-container__results {
+  width: 80%;
+  /*border: 1px solid red;*/
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #787878;
+}
+
+.city-search-container__results > div {
+  border: 1px solid #cccccc;
+  padding: 1em;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.14);
+}
+
+.city-search-container__results > div:nth-child(odd) {
+  transform: perspective(500px) rotateX(-9deg) scaleY(1.1);
+}
+
+.city-search-container__results > div:nth-child(even) {
+  transform: perspective(500px) rotateX(10deg) scaleY(1.04);
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* ------------------------------------------------------------
+  Media queries
+ ------------------------------------------------------------ */
