@@ -15,3 +15,25 @@ const comments = [
   { text: 'Nice Nice Nice!', id: 542328 }
 ];
 
+// Is at least one person 19 or older?
+const resultSome = people.some(function(person){
+  const now = new Date().getFullYear();
+  const age = now - person.year;
+  return age >= 19;
+});
+console.log("Is at least one person 19 or older?");
+console.log(resultSome);
+console.log("----------------------");
+
+
+// Is everyone 19 or older?
+const resultEvery = people.every(function(person){
+  const now = new Date().getFullYear();
+  const age = now - person.year;
+  return age >= 19;
+});
+console.log("Is everyone 19 or older?");
+console.log(resultEvery);
+console.log("----------------------");
+
+// Find the comment with the ID of 823423
